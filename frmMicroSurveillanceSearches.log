@@ -1,0 +1,3 @@
+Line 830: Class MSComctlLib.ProgressBar of control CSProgressBar was not a loaded control class.
+Line 873: Class MSComctlLib.ProgressBar of control MainProgressBar was not a loaded control class.
+Line 916: Class MSComctlLib.ProgressBar of control prgFetchingResults was not a loaded control class.

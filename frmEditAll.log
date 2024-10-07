@@ -1,0 +1,11 @@
+Line 469: Class MSComctlLib.StatusBar of control StatusBar1 was not a loaded control class.
+Line 550: Class MSComctlLib.ProgressBar of control pBar was not a loaded control class.
+Line 476: The property name _ExtentX in StatusBar1 is invalid.
+Line 477: The property name _ExtentY in StatusBar1 is invalid.
+Line 478: The property name _Version in StatusBar1 is invalid.
+Line 512: The property name Panels in StatusBar1 is invalid.
+Line 556: The property name _ExtentX in pBar is invalid.
+Line 557: The property name _ExtentY in pBar is invalid.
+Line 558: The property name _Version in pBar is invalid.
+Line 560: The property name Max in pBar is invalid.
+Line 561: The property name Scrolling in pBar is invalid.
