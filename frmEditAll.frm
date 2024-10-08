@@ -46,22 +46,27 @@ Begin VB.Form frmEditAll
       BeginProperty Panels {0713E89E-850A-101B-AFC0-4210102A8DA7} 
          NumPanels       =   5
          BeginProperty Panel1 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            TextSave        =   ""
             Key             =   ""
             Object.Tag             =   ""
          EndProperty
          BeginProperty Panel2 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            TextSave        =   ""
             Key             =   ""
             Object.Tag             =   ""
          EndProperty
          BeginProperty Panel3 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            TextSave        =   ""
             Key             =   ""
             Object.Tag             =   ""
          EndProperty
          BeginProperty Panel4 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            TextSave        =   ""
             Key             =   ""
             Object.Tag             =   ""
          EndProperty
          BeginProperty Panel5 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            TextSave        =   ""
             Key             =   ""
             Object.Tag             =   ""
          EndProperty
@@ -621,7 +626,7 @@ Begin VB.Form frmEditAll
       _ExtentY        =   12965
       _Version        =   393216
       Tabs            =   8
-      Tab             =   6
+      Tab             =   5
       TabsPerRow      =   8
       TabHeight       =   520
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -636,146 +641,183 @@ Begin VB.Form frmEditAll
       TabCaption(0)   =   "Demographics"
       TabPicture(0)   =   "frmEditAll.frx":465E
       Tab(0).ControlEnabled=   0   'False
-      Tab(0).Control(0)=   "cmdDemoVal"
-      Tab(0).Control(1)=   "Frame10(0)"
-      Tab(0).Control(2)=   "cmdSaveInc"
+      Tab(0).Control(0)=   "Frame5"
+      Tab(0).Control(1)=   "fraDate"
+      Tab(0).Control(2)=   "cmdSaveDemographics"
       Tab(0).Control(3)=   "Frame4"
-      Tab(0).Control(4)=   "cmdSaveDemographics"
-      Tab(0).Control(5)=   "fraDate"
-      Tab(0).Control(6)=   "Frame5"
+      Tab(0).Control(4)=   "cmdSaveInc"
+      Tab(0).Control(5)=   "Frame10(0)"
+      Tab(0).Control(6)=   "cmdDemoVal"
       Tab(0).ControlCount=   7
       TabCaption(1)   =   "Haematology"
       TabPicture(1)   =   "frmEditAll.frx":467A
       Tab(1).ControlEnabled=   0   'False
-      Tab(1).Control(0)=   "Label1(10)"
-      Tab(1).Control(1)=   "lblHaemPrinted"
-      Tab(1).Control(2)=   "lHaemErrors"
-      Tab(1).Control(3)=   "lblHaemValid"
-      Tab(1).Control(4)=   "lHDate"
-      Tab(1).Control(5)=   "Rundate(1)"
-      Tab(1).Control(6)=   "Label1(11)"
-      Tab(1).Control(7)=   "lblAnalyser"
-      Tab(1).Control(8)=   "Label1(20)"
-      Tab(1).Control(9)=   "lblRepeats"
-      Tab(1).Control(10)=   "Panel3D8"
-      Tab(1).Control(11)=   "bViewHaemRepeat"
-      Tab(1).Control(12)=   "cmdSaveHaem"
-      Tab(1).Control(13)=   "bValidateHaem"
-      Tab(1).Control(14)=   "Panel3D4"
-      Tab(1).Control(15)=   "Panel3D5"
-      Tab(1).Control(16)=   "Panel3D7"
-      Tab(1).Control(17)=   "txtHaemComment"
-      Tab(1).Control(18)=   "bHaemGraphs"
-      Tab(1).Control(19)=   "cFilm"
-      Tab(1).Control(20)=   "bFilm"
-      Tab(1).Control(21)=   "txtCondition"
-      Tab(1).Control(22)=   "cmdHSaveH"
-      Tab(1).Control(23)=   "cmdSaveComm"
-      Tab(1).Control(24)=   "cmdViewHaemRep"
-      Tab(1).Control(25)=   "cmdUnvalPrint"
-      Tab(1).Control(26)=   "Panel3D6"
-      Tab(1).Control(27)=   "Picture2"
+      Tab(1).Control(0)=   "Picture2"
+      Tab(1).Control(1)=   "Panel3D6"
+      Tab(1).Control(2)=   "cmdUnvalPrint"
+      Tab(1).Control(3)=   "cmdViewHaemRep"
+      Tab(1).Control(4)=   "cmdSaveComm"
+      Tab(1).Control(5)=   "cmdHSaveH"
+      Tab(1).Control(6)=   "txtCondition"
+      Tab(1).Control(7)=   "bFilm"
+      Tab(1).Control(8)=   "cFilm"
+      Tab(1).Control(9)=   "bHaemGraphs"
+      Tab(1).Control(10)=   "txtHaemComment"
+      Tab(1).Control(11)=   "Panel3D7"
+      Tab(1).Control(12)=   "Panel3D5"
+      Tab(1).Control(13)=   "Panel3D4"
+      Tab(1).Control(14)=   "bValidateHaem"
+      Tab(1).Control(15)=   "cmdSaveHaem"
+      Tab(1).Control(16)=   "bViewHaemRepeat"
+      Tab(1).Control(17)=   "Panel3D8"
+      Tab(1).Control(18)=   "lblRepeats"
+      Tab(1).Control(19)=   "Label1(20)"
+      Tab(1).Control(20)=   "lblAnalyser"
+      Tab(1).Control(21)=   "Label1(11)"
+      Tab(1).Control(22)=   "Rundate(1)"
+      Tab(1).Control(23)=   "lHDate"
+      Tab(1).Control(24)=   "lblHaemValid"
+      Tab(1).Control(25)=   "lHaemErrors"
+      Tab(1).Control(26)=   "lblHaemPrinted"
+      Tab(1).Control(27)=   "Label1(10)"
       Tab(1).ControlCount=   28
       TabCaption(2)   =   "Biochemistry"
       TabPicture(2)   =   "frmEditAll.frx":4696
       Tab(2).ControlEnabled=   0   'False
-      Tab(2).Control(0)=   "lblViewSplit"
-      Tab(2).Control(1)=   "lRandom"
-      Tab(2).Control(2)=   "lBDate"
-      Tab(2).Control(3)=   "Rundate(2)"
-      Tab(2).Control(4)=   "lblAss"
-      Tab(2).Control(5)=   "An1"
-      Tab(2).Control(6)=   "An2"
-      Tab(2).Control(7)=   "gBio"
-      Tab(2).Control(8)=   "Frame2"
-      Tab(2).Control(9)=   "cUnits"
-      Tab(2).Control(10)=   "tnewvalue"
-      Tab(2).Control(11)=   "cAdd"
-      Tab(2).Control(12)=   "bremoveduplicates"
-      Tab(2).Control(13)=   "bAddBio"
-      Tab(2).Control(14)=   "Frame3"
-      Tab(2).Control(15)=   "cmdSaveBio"
-      Tab(2).Control(16)=   "bValidateBio"
-      Tab(2).Control(17)=   "grdOutstanding"
-      Tab(2).Control(18)=   "Frame8"
-      Tab(2).Control(19)=   "bViewBioRepeat"
-      Tab(2).Control(20)=   "bReprint"
-      Tab(2).Control(21)=   "cmdViewBioReps"
-      Tab(2).Control(22)=   "fraSelectPrint(1)"
-      Tab(2).Control(23)=   "cISampleType(3)"
+      Tab(2).Control(0)=   "cISampleType(3)"
+      Tab(2).Control(1)=   "fraSelectPrint(1)"
+      Tab(2).Control(2)=   "cmdViewBioReps"
+      Tab(2).Control(3)=   "bReprint"
+      Tab(2).Control(4)=   "bViewBioRepeat"
+      Tab(2).Control(5)=   "Frame8"
+      Tab(2).Control(6)=   "grdOutstanding"
+      Tab(2).Control(7)=   "bValidateBio"
+      Tab(2).Control(8)=   "cmdSaveBio"
+      Tab(2).Control(9)=   "Frame3"
+      Tab(2).Control(10)=   "bAddBio"
+      Tab(2).Control(11)=   "bremoveduplicates"
+      Tab(2).Control(12)=   "cAdd"
+      Tab(2).Control(13)=   "tnewvalue"
+      Tab(2).Control(14)=   "cUnits"
+      Tab(2).Control(15)=   "Frame2"
+      Tab(2).Control(16)=   "gBio"
+      Tab(2).Control(17)=   "An2"
+      Tab(2).Control(18)=   "An1"
+      Tab(2).Control(19)=   "lblAss"
+      Tab(2).Control(20)=   "Rundate(2)"
+      Tab(2).Control(21)=   "lBDate"
+      Tab(2).Control(22)=   "lRandom"
+      Tab(2).Control(23)=   "lblViewSplit"
       Tab(2).ControlCount=   24
       TabCaption(3)   =   "Coagulation"
       TabPicture(3)   =   "frmEditAll.frx":46B2
       Tab(3).ControlEnabled=   0   'False
-      Tab(3).Control(0)=   "Frame11(2)"
-      Tab(3).Control(1)=   "fraSelectPrint(2)"
-      Tab(3).Control(2)=   "txtCoagComment"
-      Tab(3).Control(3)=   "cmdViewCoagRep"
-      Tab(3).Control(4)=   "cCunits"
-      Tab(3).Control(5)=   "cmdPrintAll"
-      Tab(3).Control(6)=   "Frame9"
-      Tab(3).Control(7)=   "cmdValidateCoag"
-      Tab(3).Control(8)=   "cmdSaveCoag"
-      Tab(3).Control(9)=   "bViewCoagRepeat"
-      Tab(3).Control(10)=   "bAddCoag"
-      Tab(3).Control(11)=   "tResult"
-      Tab(3).Control(12)=   "cParameter"
-      Tab(3).Control(13)=   "grdCoag"
-      Tab(3).Control(14)=   "grdOutstandingCoag"
-      Tab(3).Control(15)=   "grdPrev"
-      Tab(3).Control(16)=   "Rundate(3)"
-      Tab(3).Control(17)=   "lCDate"
-      Tab(3).Control(18)=   "lblPrevCoag"
-      Tab(3).Control(19)=   "Label20"
+      Tab(3).Control(0)=   "Label20"
+      Tab(3).Control(1)=   "lblPrevCoag"
+      Tab(3).Control(2)=   "lCDate"
+      Tab(3).Control(3)=   "Rundate(3)"
+      Tab(3).Control(4)=   "grdPrev"
+      Tab(3).Control(5)=   "grdOutstandingCoag"
+      Tab(3).Control(6)=   "grdCoag"
+      Tab(3).Control(7)=   "cParameter"
+      Tab(3).Control(8)=   "tResult"
+      Tab(3).Control(9)=   "bAddCoag"
+      Tab(3).Control(10)=   "bViewCoagRepeat"
+      Tab(3).Control(11)=   "cmdSaveCoag"
+      Tab(3).Control(12)=   "cmdValidateCoag"
+      Tab(3).Control(13)=   "Frame9"
+      Tab(3).Control(14)=   "cmdPrintAll"
+      Tab(3).Control(15)=   "cCunits"
+      Tab(3).Control(16)=   "cmdViewCoagRep"
+      Tab(3).Control(17)=   "txtCoagComment"
+      Tab(3).Control(18)=   "fraSelectPrint(2)"
+      Tab(3).Control(19)=   "Frame11(2)"
       Tab(3).ControlCount=   20
       TabCaption(4)   =   "Endocrinology"
       TabPicture(4)   =   "frmEditAll.frx":46CE
       Tab(4).ControlEnabled=   0   'False
       Tab(4).Control(0)=   "lblImmViewSplit(0)"
+      Tab(4).Control(0).Enabled=   0   'False
       Tab(4).Control(1)=   "lImmRan(0)"
+      Tab(4).Control(1).Enabled=   0   'False
       Tab(4).Control(2)=   "Rundate(0)"
+      Tab(4).Control(2).Enabled=   0   'False
       Tab(4).Control(3)=   "lblEDate"
+      Tab(4).Control(3).Enabled=   0   'False
       Tab(4).Control(4)=   "Frame11(0)"
+      Tab(4).Control(4).Enabled=   0   'False
       Tab(4).Control(5)=   "Frame10(1)"
+      Tab(4).Control(5).Enabled=   0   'False
       Tab(4).Control(6)=   "gImm(0)"
+      Tab(4).Control(6).Enabled=   0   'False
       Tab(4).Control(7)=   "grdOutstandings(0)"
+      Tab(4).Control(7).Enabled=   0   'False
       Tab(4).Control(8)=   "bImmRePrint(0)"
+      Tab(4).Control(8).Enabled=   0   'False
       Tab(4).Control(9)=   "bViewImmRepeat(0)"
+      Tab(4).Control(9).Enabled=   0   'False
       Tab(4).Control(10)=   "Frame81(0)"
+      Tab(4).Control(10).Enabled=   0   'False
       Tab(4).Control(11)=   "bValidateImm(0)"
+      Tab(4).Control(11).Enabled=   0   'False
       Tab(4).Control(12)=   "cmdSaveImm(0)"
+      Tab(4).Control(12).Enabled=   0   'False
       Tab(4).Control(13)=   "cmdIAdd(0)"
+      Tab(4).Control(13).Enabled=   0   'False
       Tab(4).Control(14)=   "cmdIremoveduplicates(0)"
+      Tab(4).Control(14).Enabled=   0   'False
       Tab(4).Control(15)=   "cIAdd(0)"
+      Tab(4).Control(15).Enabled=   0   'False
       Tab(4).Control(16)=   "tINewValue(0)"
+      Tab(4).Control(16).Enabled=   0   'False
       Tab(4).Control(17)=   "cIUnits(0)"
+      Tab(4).Control(17).Enabled=   0   'False
       Tab(4).Control(18)=   "cISampleType(0)"
+      Tab(4).Control(18).Enabled=   0   'False
       Tab(4).Control(19)=   "Frame12(0)"
+      Tab(4).Control(19).Enabled=   0   'False
       Tab(4).Control(20)=   "cmdViewReports"
+      Tab(4).Control(20).Enabled=   0   'False
       Tab(4).Control(21)=   "fraSelectPrint(3)"
+      Tab(4).Control(21).Enabled=   0   'False
       Tab(4).Control(22)=   "cmdGetBioEnd"
+      Tab(4).Control(22).Enabled=   0   'False
       Tab(4).ControlCount=   23
       TabCaption(5)   =   "Blood Gas"
       TabPicture(5)   =   "frmEditAll.frx":46EA
-      Tab(5).ControlEnabled=   0   'False
-      Tab(5).Control(0)=   "bImmRePrint(2)"
-      Tab(5).Control(1)=   "cISampleType(2)"
-      Tab(5).Control(2)=   "cmdIAdd(2)"
-      Tab(5).Control(3)=   "cIAdd(2)"
-      Tab(5).Control(4)=   "tINewValue(2)"
-      Tab(5).Control(5)=   "cIUnits(2)"
-      Tab(5).Control(6)=   "Frame15"
-      Tab(5).Control(7)=   "bViewBgaRepeat"
-      Tab(5).Control(8)=   "cmdValBG"
-      Tab(5).Control(9)=   "cmdSaveBGa"
-      Tab(5).Control(10)=   "Frame14"
-      Tab(5).Control(11)=   "gBga"
-      Tab(5).Control(12)=   "lblBgaDate"
-      Tab(5).Control(13)=   "Rundate(5)"
+      Tab(5).ControlEnabled=   -1  'True
+      Tab(5).Control(0)=   "Rundate(5)"
+      Tab(5).Control(0).Enabled=   0   'False
+      Tab(5).Control(1)=   "lblBgaDate"
+      Tab(5).Control(1).Enabled=   0   'False
+      Tab(5).Control(2)=   "gBga"
+      Tab(5).Control(2).Enabled=   0   'False
+      Tab(5).Control(3)=   "Frame14"
+      Tab(5).Control(3).Enabled=   0   'False
+      Tab(5).Control(4)=   "cmdSaveBGa"
+      Tab(5).Control(4).Enabled=   0   'False
+      Tab(5).Control(5)=   "cmdValBG"
+      Tab(5).Control(5).Enabled=   0   'False
+      Tab(5).Control(6)=   "bViewBgaRepeat"
+      Tab(5).Control(6).Enabled=   0   'False
+      Tab(5).Control(7)=   "Frame15"
+      Tab(5).Control(7).Enabled=   0   'False
+      Tab(5).Control(8)=   "cIUnits(2)"
+      Tab(5).Control(8).Enabled=   0   'False
+      Tab(5).Control(9)=   "tINewValue(2)"
+      Tab(5).Control(9).Enabled=   0   'False
+      Tab(5).Control(10)=   "cIAdd(2)"
+      Tab(5).Control(10).Enabled=   0   'False
+      Tab(5).Control(11)=   "cmdIAdd(2)"
+      Tab(5).Control(11).Enabled=   0   'False
+      Tab(5).Control(12)=   "cISampleType(2)"
+      Tab(5).Control(12).Enabled=   0   'False
+      Tab(5).Control(13)=   "bImmRePrint(2)"
+      Tab(5).Control(13).Enabled=   0   'False
       Tab(5).ControlCount=   14
       TabCaption(6)   =   "Immunology"
       TabPicture(6)   =   "frmEditAll.frx":4706
-      Tab(6).ControlEnabled=   -1  'True
+      Tab(6).ControlEnabled=   0   'False
       Tab(6).Control(0)=   "Rundate(4)"
       Tab(6).Control(0).Enabled=   0   'False
       Tab(6).Control(1)=   "lblIRundate"
@@ -828,30 +870,30 @@ Begin VB.Form frmEditAll
       TabCaption(7)   =   "Externals"
       TabPicture(7)   =   "frmEditAll.frx":4722
       Tab(7).ControlEnabled=   0   'False
-      Tab(7).Control(0)=   "baddtotests(1)"
-      Tab(7).Control(1)=   "cmdSaveImm(2)"
-      Tab(7).Control(2)=   "bValidateImm(2)"
-      Tab(7).Control(3)=   "cmdExcel"
-      Tab(7).Control(4)=   "cmdViewExtReport"
-      Tab(7).Control(5)=   "baddtotests(0)"
-      Tab(7).Control(6)=   "txtEtc(8)"
-      Tab(7).Control(7)=   "txtEtc(7)"
-      Tab(7).Control(8)=   "txtEtc(6)"
-      Tab(7).Control(9)=   "txtEtc(5)"
-      Tab(7).Control(10)=   "txtEtc(1)"
-      Tab(7).Control(11)=   "txtEtc(2)"
-      Tab(7).Control(12)=   "txtEtc(3)"
-      Tab(7).Control(13)=   "txtEtc(4)"
-      Tab(7).Control(14)=   "txtEtc(0)"
-      Tab(7).Control(15)=   "cmdDel"
-      Tab(7).Control(16)=   "grdExt"
-      Tab(7).Control(17)=   "lblExcelInfo"
+      Tab(7).Control(0)=   "lblExcelInfo"
+      Tab(7).Control(1)=   "grdExt"
+      Tab(7).Control(2)=   "cmdDel"
+      Tab(7).Control(3)=   "txtEtc(0)"
+      Tab(7).Control(4)=   "txtEtc(4)"
+      Tab(7).Control(5)=   "txtEtc(3)"
+      Tab(7).Control(6)=   "txtEtc(2)"
+      Tab(7).Control(7)=   "txtEtc(1)"
+      Tab(7).Control(8)=   "txtEtc(5)"
+      Tab(7).Control(9)=   "txtEtc(6)"
+      Tab(7).Control(10)=   "txtEtc(7)"
+      Tab(7).Control(11)=   "txtEtc(8)"
+      Tab(7).Control(12)=   "baddtotests(0)"
+      Tab(7).Control(13)=   "cmdViewExtReport"
+      Tab(7).Control(14)=   "cmdExcel"
+      Tab(7).Control(15)=   "bValidateImm(2)"
+      Tab(7).Control(16)=   "cmdSaveImm(2)"
+      Tab(7).Control(17)=   "baddtotests(1)"
       Tab(7).ControlCount=   18
       Begin VB.CommandButton bImmRePrint 
          Caption         =   "Re-Print"
          Height          =   960
          Index           =   2
-         Left            =   -65220
+         Left            =   9780
          Picture         =   "frmEditAll.frx":473E
          Style           =   1  'Graphical
          TabIndex        =   332
@@ -1117,7 +1159,7 @@ Begin VB.Form frmEditAll
       Begin VB.Frame fraSelectPrint 
          Height          =   435
          Index           =   0
-         Left            =   9420
+         Left            =   -65580
          TabIndex        =   300
          Top             =   360
          Width           =   2085
@@ -1156,7 +1198,7 @@ Begin VB.Form frmEditAll
       Begin VB.CommandButton cmdPhoresisComments 
          Caption         =   "Phoresis Comments"
          Height          =   1155
-         Left            =   10620
+         Left            =   -64380
          Picture         =   "frmEditAll.frx":72E0
          Style           =   1  'Graphical
          TabIndex        =   299
@@ -1283,7 +1325,7 @@ Begin VB.Form frmEditAll
       Begin VB.CommandButton cmdOrderPhoresis 
          Caption         =   "Order Phoresis"
          Height          =   1155
-         Left            =   11670
+         Left            =   -63330
          Picture         =   "frmEditAll.frx":81AA
          Style           =   1  'Graphical
          TabIndex        =   291
@@ -1339,7 +1381,7 @@ Begin VB.Form frmEditAll
       Begin VB.CommandButton cmdViewImmRep 
          Caption         =   "Reports"
          Height          =   915
-         Left            =   7695
+         Left            =   -67305
          Picture         =   "frmEditAll.frx":9992
          Style           =   1  'Graphical
          TabIndex        =   280
@@ -1514,7 +1556,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Specimen Condition"
          Height          =   1035
          Index           =   1
-         Left            =   7155
+         Left            =   -67845
          TabIndex        =   245
          Top             =   4140
          Width           =   3285
@@ -1580,7 +1622,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Delta Check"
          Height          =   1905
          Index           =   1
-         Left            =   3825
+         Left            =   -71175
          TabIndex        =   241
          Top             =   4140
          Width           =   3240
@@ -1601,7 +1643,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Immunology Comments"
          Height          =   1905
          Index           =   1
-         Left            =   315
+         Left            =   -74685
          TabIndex        =   239
          Top             =   4095
          Width           =   3330
@@ -1622,7 +1664,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Remove Duplicates"
          Height          =   915
          Index           =   1
-         Left            =   9300
+         Left            =   -65700
          Picture         =   "frmEditAll.frx":AED8
          Style           =   1  'Graphical
          TabIndex        =   238
@@ -1634,7 +1676,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Add Result"
          Height          =   915
          Index           =   1
-         Left            =   8505
+         Left            =   -66495
          Picture         =   "frmEditAll.frx":B1E2
          Style           =   1  'Graphical
          TabIndex        =   237
@@ -1648,7 +1690,7 @@ Begin VB.Form frmEditAll
          Enabled         =   0   'False
          Height          =   915
          Index           =   1
-         Left            =   11745
+         Left            =   -63255
          Picture         =   "frmEditAll.frx":B4EC
          Style           =   1  'Graphical
          TabIndex        =   236
@@ -1660,7 +1702,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Validate"
          Height          =   915
          Index           =   1
-         Left            =   12510
+         Left            =   -62490
          Picture         =   "frmEditAll.frx":B7F6
          Style           =   1  'Graphical
          TabIndex        =   235
@@ -1673,7 +1715,7 @@ Begin VB.Form frmEditAll
          Caption         =   "View Repeat"
          Height          =   915
          Index           =   1
-         Left            =   10215
+         Left            =   -64785
          Picture         =   "frmEditAll.frx":BB00
          Style           =   1  'Graphical
          TabIndex        =   234
@@ -1686,7 +1728,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Re-Print"
          Height          =   915
          Index           =   1
-         Left            =   10995
+         Left            =   -64005
          Picture         =   "frmEditAll.frx":BC8A
          Style           =   1  'Graphical
          TabIndex        =   233
@@ -1698,7 +1740,7 @@ Begin VB.Form frmEditAll
       Begin VB.ComboBox cISampleType 
          Height          =   315
          Index           =   1
-         Left            =   4590
+         Left            =   -70410
          TabIndex        =   232
          Text            =   "cSampleType"
          ToolTipText     =   "Choose Sample Type"
@@ -1708,7 +1750,7 @@ Begin VB.Form frmEditAll
       Begin VB.ComboBox cIUnits 
          Height          =   315
          Index           =   1
-         Left            =   3225
+         Left            =   -71775
          TabIndex        =   231
          Text            =   "cUnits"
          ToolTipText     =   "Choose Units"
@@ -1718,7 +1760,7 @@ Begin VB.Form frmEditAll
       Begin VB.TextBox tINewValue 
          Height          =   315
          Index           =   1
-         Left            =   1815
+         Left            =   -73185
          MaxLength       =   300
          TabIndex        =   230
          ToolTipText     =   "Enter Result"
@@ -1728,7 +1770,7 @@ Begin VB.Form frmEditAll
       Begin VB.ComboBox cIAdd 
          Height          =   315
          Index           =   1
-         Left            =   180
+         Left            =   -74820
          TabIndex        =   229
          Text            =   "cAdd"
          ToolTipText     =   "Choose Test"
@@ -1738,7 +1780,7 @@ Begin VB.Form frmEditAll
       Begin VB.CommandButton cmdGetBio 
          Caption         =   "Get Bio Tests"
          Height          =   780
-         Left            =   9150
+         Left            =   -65850
          Picture         =   "frmEditAll.frx":BF94
          Style           =   1  'Graphical
          TabIndex        =   228
@@ -1749,7 +1791,7 @@ Begin VB.Form frmEditAll
       Begin VB.ComboBox cISampleType 
          Height          =   315
          Index           =   2
-         Left            =   -70095
+         Left            =   4905
          TabIndex        =   227
          Text            =   "cSampleType"
          Top             =   5250
@@ -1759,7 +1801,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Add Result"
          Height          =   960
          Index           =   2
-         Left            =   -67800
+         Left            =   7200
          Picture         =   "frmEditAll.frx":C29E
          Style           =   1  'Graphical
          TabIndex        =   226
@@ -1770,7 +1812,7 @@ Begin VB.Form frmEditAll
       Begin VB.ComboBox cIAdd 
          Height          =   315
          Index           =   2
-         Left            =   -74640
+         Left            =   360
          TabIndex        =   225
          Text            =   "cAdd"
          Top             =   5250
@@ -1779,7 +1821,7 @@ Begin VB.Form frmEditAll
       Begin VB.TextBox tINewValue 
          Height          =   315
          Index           =   2
-         Left            =   -73005
+         Left            =   1995
          MaxLength       =   15
          TabIndex        =   224
          Top             =   5250
@@ -1788,7 +1830,7 @@ Begin VB.Form frmEditAll
       Begin VB.ComboBox cIUnits 
          Height          =   315
          Index           =   2
-         Left            =   -71460
+         Left            =   3540
          TabIndex        =   223
          Text            =   "cUnits"
          Top             =   5250
@@ -1809,7 +1851,7 @@ Begin VB.Form frmEditAll
       Begin VB.Frame Frame15 
          Caption         =   "Delta Check"
          Height          =   1905
-         Left            =   -68430
+         Left            =   6570
          TabIndex        =   220
          Top             =   930
          Width           =   4785
@@ -1829,7 +1871,7 @@ Begin VB.Form frmEditAll
          BackColor       =   &H0000FFFF&
          Caption         =   "View Repeat"
          Height          =   960
-         Left            =   -64380
+         Left            =   10620
          Picture         =   "frmEditAll.frx":C8B2
          Style           =   1  'Graphical
          TabIndex        =   219
@@ -1881,7 +1923,7 @@ Begin VB.Form frmEditAll
       Begin VB.CommandButton cmdValBG 
          Caption         =   "Validate"
          Height          =   960
-         Left            =   -66090
+         Left            =   8910
          Picture         =   "frmEditAll.frx":D050
          Style           =   1  'Graphical
          TabIndex        =   158
@@ -1892,7 +1934,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Save Details"
          Enabled         =   0   'False
          Height          =   960
-         Left            =   -66930
+         Left            =   8070
          Picture         =   "frmEditAll.frx":D35A
          Style           =   1  'Graphical
          TabIndex        =   157
@@ -1902,7 +1944,7 @@ Begin VB.Form frmEditAll
       Begin VB.Frame Frame14 
          Caption         =   "Blood Gas Comments"
          Height          =   1905
-         Left            =   -68475
+         Left            =   6525
          TabIndex        =   155
          Top             =   2865
          Width           =   4845
@@ -3506,7 +3548,7 @@ Begin VB.Form frmEditAll
             _ExtentX        =   2408
             _ExtentY        =   556
             _Version        =   393216
-            Format          =   188743681
+            Format          =   179961857
             CurrentDate     =   36942
          End
          Begin MSComCtl2.DTPicker dtSampleDate 
@@ -3518,7 +3560,7 @@ Begin VB.Form frmEditAll
             _ExtentX        =   2408
             _ExtentY        =   556
             _Version        =   393216
-            Format          =   188743681
+            Format          =   179961857
             CurrentDate     =   36942
          End
          Begin MSMask.MaskEdBox tSampleTime 
@@ -3553,7 +3595,7 @@ Begin VB.Form frmEditAll
             _ExtentX        =   2408
             _ExtentY        =   556
             _Version        =   393216
-            Format          =   188743681
+            Format          =   179961857
             CurrentDate     =   36942
          End
          Begin MSMask.MaskEdBox tRecTime 
@@ -4016,7 +4058,7 @@ Begin VB.Form frmEditAll
       End
       Begin MSFlexGridLib.MSFlexGrid gBga 
          Height          =   4275
-         Left            =   -74685
+         Left            =   315
          TabIndex        =   218
          Top             =   930
          Width           =   6060
@@ -4049,7 +4091,7 @@ Begin VB.Form frmEditAll
       Begin MSFlexGridLib.MSFlexGrid grdOutstandings 
          Height          =   3270
          Index           =   1
-         Left            =   11580
+         Left            =   -63420
          TabIndex        =   243
          ToolTipText     =   "Tests still not run."
          Top             =   810
@@ -4071,7 +4113,7 @@ Begin VB.Form frmEditAll
       Begin MSFlexGridLib.MSFlexGrid gImm 
          Height          =   3285
          Index           =   1
-         Left            =   180
+         Left            =   -74820
          TabIndex        =   244
          Top             =   795
          Width           =   11400
@@ -4223,7 +4265,7 @@ Begin VB.Form frmEditAll
          BackColor       =   &H00FFFFFF&
          BorderStyle     =   1  'Fixed Single
          Height          =   285
-         Left            =   -73050
+         Left            =   1950
          TabIndex        =   269
          Top             =   5700
          Width           =   2865
@@ -4232,7 +4274,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Rundate"
          Height          =   255
          Index           =   5
-         Left            =   -73695
+         Left            =   1305
          TabIndex        =   270
          Top             =   5730
          Width           =   675
@@ -4244,7 +4286,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Random Sample"
          Height          =   465
          Index           =   1
-         Left            =   7680
+         Left            =   -67320
          TabIndex        =   255
          ToolTipText     =   "Click to Toggle"
          Top             =   5400
@@ -4267,7 +4309,7 @@ Begin VB.Form frmEditAll
          ForeColor       =   &H0000FF00&
          Height          =   285
          Index           =   1
-         Left            =   180
+         Left            =   -74820
          TabIndex        =   254
          Top             =   6210
          Width           =   5955
@@ -4276,7 +4318,7 @@ Begin VB.Form frmEditAll
          BackColor       =   &H00E0E0E0&
          BorderStyle     =   1  'Fixed Single
          Height          =   285
-         Left            =   3210
+         Left            =   -71790
          TabIndex        =   253
          Top             =   6885
          Width           =   2910
@@ -4285,7 +4327,7 @@ Begin VB.Form frmEditAll
          Caption         =   "Rundate"
          Height          =   255
          Index           =   4
-         Left            =   2520
+         Left            =   -72480
          TabIndex        =   252
          Top             =   6915
          Width           =   675
